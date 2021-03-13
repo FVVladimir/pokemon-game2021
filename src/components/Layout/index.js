@@ -5,8 +5,8 @@ const Layout = ({ title, desc, urlBg, colorBg }) => {
 
     const ourStyle = {
 
-        backgroundImage: `${urlBg || ' '}`,
-        backgroundColor: `${colorBg || ''}`
+        backgroundImage: `${urlBg}`,
+        backgroundColor: `${colorBg}`
     }
 
 
