@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './style.module.css';
 
-const Layout = ({ title, desc, urlBg, colorBg }) => {
+const Layout = ({ title, desc, urlBg, colorBg, children }) => {
 
     const ourStyle = {
 
@@ -22,6 +22,7 @@ const Layout = ({ title, desc, urlBg, colorBg }) => {
                     </div>
                     <div className={`${s.desc} ${s.full}`}>
                         <p>{desc}</p>
+                        {children}
                     </div>
                 </article>
             </div>
