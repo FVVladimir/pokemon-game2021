@@ -3,10 +3,10 @@ import s from './style.module.css';
 import cn from 'classnames';
 import { useState } from 'react';
 
-const Menu = (isActive) => {
+const Menu = () => {
 
     return (
-        <div className={cn(s.menuContainer, { [s.activess]: isActive, [s.deactive]: !isActive })}>
+        <div className={cn(s.menuContainer, s.actives, s.deactive)}>
             <div className={s.overlay}>
                 <div className={s.menuItems}>
                     <ul>
