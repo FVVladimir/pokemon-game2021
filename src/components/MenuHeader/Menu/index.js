@@ -17,22 +17,22 @@ const Menu = () => {
                 <div className={s.menuItems}>
                     <ul>
                         <li>
-                            <a href="#welcome">
+                            <a href="# ">
                                 HOME
         </a>
                         </li>
                         <li>
-                            <a href="#game">
+                            <a href="# ">
                                 GAME
         </a>
                         </li>
                         <li>
-                            <a href="#about">
+                            <a href="# ">
                                 ABOUT
         </a>
                         </li>
                         <li>
-                            <a href="#contact">
+                            <a href="# ">
                                 CONTACT
         </a>
                         </li>
