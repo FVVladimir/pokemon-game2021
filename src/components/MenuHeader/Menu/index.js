@@ -1,45 +1,50 @@
-import React from 'react';
 import s from './style.module.css';
 import cn from 'classnames';
-import { useState } from 'react';
 
-const Menu = () => {
+const MENU = [
+    {
+        title: 'HOME',
+        to: '#welcome',
+    },
+    {
+        title: 'GAME',
+        to: '#game',
+    },
+    {
+        title: 'ABOUT',
+        to: '#about',
+    },
+    {
+        title: 'CONTACT',
+        to: '#contact',
+    },
+]
 
-    const [isActive, setActive] = useState(false);
-    const handleClick = () => {
-
-        setActive(!isActive);
-    }
+const Menu = ({ isOpen }) => {
 
     return (
-        <div className={cn(s.menuContainer, { [s.actives]: isActive })} onClick={handleClick}>
+        <div className={cn(s.menuContainer, {
+            [s.active]: isOpen === true,
+            [s.deactive]: isOpen === false
+        })}>
             <div className={s.overlay}>
-                <div className={s.menuItems}>
+                <div>
                     <ul>
-                        <li>
-                            <a href="#">
-                                HOME
-        </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                GAME
-        </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                ABOUT
-        </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                CONTACT
-        </a>
-                        </li>
+                        {
+                            MENU.map(({ title, to }, index) => (
+                                <li key={index}>
+                                    <a href={to}>
+                                        {title}
+                                    </a>
+
+                                </li>
+                            ))
+                        }
                     </ul>
+
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 
