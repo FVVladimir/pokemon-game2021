@@ -2,7 +2,13 @@ import React from 'react';
 import s from './style.module.css';
 
 
-const Header = ({ title, desc }) => {
+const Header = ({ title, desc, onClickButton }) => {
+
+    const handleClick = () => {
+
+        console.log('####: <Header />');
+        onClickButton && onClickButton('game');
+    }
 
     return (
         <header className={s.root}>
@@ -10,6 +16,9 @@ const Header = ({ title, desc }) => {
             <div className={s.container}>
                 <h1>{title}</h1>
                 <p>{desc}</p>
+                <button onClick={handleClick}>
+                    let the game star!!
+                </button>
             </div>
         </header>
     );
