@@ -1,16 +1,27 @@
-const GamePage = (page, onClickButton) => {
-    // const handleClick = () => {
+import s from './style.module.css';
 
-    //     onClickButton && onClickButton(page);
-    // }
+const GamePage = ({onClickButton}) => {
+    
+    const handleClick = () => {
+        
+        console.log('get home page')
+        
+        onClickButton && onClickButton('home');
+        
+    }
 
     return (
-        <div>
+
+        <>
+         <div>
             This is game page!!
-            {/* <button onClick={handleClick}>
-                get home
-            </button> */}
+             
         </div>
+         <button className={s.button} onClick={handleClick}>
+            get home page !!
+        </button>
+        </>
+       
     )
 }
 export default GamePage;
