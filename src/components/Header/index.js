@@ -1,4 +1,3 @@
-import React from 'react';
 import s from './style.module.css';
 
 
@@ -16,7 +15,7 @@ const Header = ({ title, desc, onClickButton }) => {
             <div className={s.container}>
                 <h1>{title}</h1>
                 <p>{desc}</p>
-                <button onClick={handleClick}>
+                <button className={s.button} onClick={handleClick}>
                     let the game star!!
                 </button>
             </div>
