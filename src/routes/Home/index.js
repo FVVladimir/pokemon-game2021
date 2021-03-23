@@ -2,10 +2,9 @@ import Header from '../../components/Header';
 import Layout from '../../components/Layout';
 import Footer from '../../components/Footer';
 import s from './style.module.css';
-
-import Bg2 from '../../pic/bg2.jpg';
 import PokemonCard from '../../components/PokemonCard';
 import MenuHeader from '../../components/MenuHeader';
+import { useHistory } from 'react-router';
 
 const POKEMONS = [
     {
@@ -142,24 +141,21 @@ const POKEMONS = [
     }
 ]
 
-const HomePage = ({ onChangePage }) => {
+const HomePage = () => {
 
-    const handleClickButton = (page) => {
+    const history = useHistory();
 
-        console.log('####: <HomePage />');
-        onChangePage && onChangePage(page);
+    const handleClickButton = () => {
+        // console.log('####: <HomePage />');
+        history.push('game');
     }
-
     return (
         <>
             <MenuHeader />
             <Header
-
                 title='POKEMON GAME'
+                desc='the best game'
                 onClickButton={handleClickButton}
-            />
-            <Layout
-                urlBg={Bg2}
             />
             <Layout
                 title='cards'
@@ -175,8 +171,8 @@ const HomePage = ({ onChangePage }) => {
 
             </Layout>
             <Layout
-                colorBg='red'
-                title='therd layout'
+                colorBg='blue'
+                title='rules game'
             >
                 <p>
                     In the game two players face off against one another,
