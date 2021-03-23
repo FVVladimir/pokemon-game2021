@@ -29,21 +29,19 @@ const Menu = ({ isOpen }) => {
             [s.deactive]: isOpen === false
         })}>
             <div className={s.overlay}>
-                <div>
-                    <ul>
-                        {
-                            MENU.map(({ title, to }, index) => (
-                                <li key={index}>
-                                    <Link to={to}>
-                                        {title}
-                                    </Link>
+                <ul>
+                    {
+                        MENU.map(({ title, to }, index) => (
+                            <li key={index}>
+                                <Link to={to}>
+                                    {title}
+                                </Link>
 
-                                </li>
-                            ))
-                        }
-                    </ul>
+                            </li>
+                        ))
+                    }
+                </ul>
 
-                </div>
             </div>
         </div >
     );
