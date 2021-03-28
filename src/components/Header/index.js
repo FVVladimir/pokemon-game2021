@@ -6,9 +6,7 @@ const Header = ({ title, desc }) => {
     const handleClick = () => {
         console.log('####: <Header />');
         history.push('/game');
-
     }
-
     return (
         <header className={s.root}>
             <div className={s.forest}></div>
@@ -17,7 +15,7 @@ const Header = ({ title, desc }) => {
                 <p>{desc}</p>
                 <button className={s.button} onClick={handleClick}>
                     let the game start!!
-                </button>
+                    </button>
             </div>
         </header>
     );
